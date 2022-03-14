@@ -9,11 +9,11 @@ contract Viking is ERC721Enumerable, Ownable {
     using Strings for uint256;
 
     string _baseTokenURI;
-    uint256 private _reserved = 1;
-    uint256 private _price = 0.06 ether;
+    uint256 private _reserved = 150;
+    uint256 private _price = 0 ether;
     bool public _paused = true;
-    uint private _maximumViking = 6;
-    uint256 private _maxMintAmount = 3;
+    uint private _maximumViking = 1111;
+    uint256 private _maxMintAmount = 15;
 
     // Developer addresses
     address dev1 = 0x41489AC775dd52bD5Bc616149aB93e371E9D3687; // Ragnar

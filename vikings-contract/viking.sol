@@ -50,14 +50,9 @@ contract Viking is ERC721Enumerable, Ownable {
         return tokensId;
     }
 
-    // Just in case Eth does some crazy stuff
+    // Just in case
     function setPrice(uint256 _newPrice) public onlyOwner() {
         _price = _newPrice;
-    }
-
-    // Increase max after Whitelist sale
-    function setMaxMint(uint256 _newMax) public onlyOwner() {
-        _maxMintAmount = _newMax;
     }
 
     function _baseURI() internal view virtual override returns (string memory) {

@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/vikings/static/css/main.8219310c.chunk.css",
-    "main.js": "/vikings/static/js/main.232db277.chunk.js",
-    "main.js.map": "/vikings/static/js/main.232db277.chunk.js.map",
-    "runtime-main.js": "/vikings/static/js/runtime-main.9cf20d79.js",
-    "runtime-main.js.map": "/vikings/static/js/runtime-main.9cf20d79.js.map",
-    "static/js/2.d975b02f.chunk.js": "/vikings/static/js/2.d975b02f.chunk.js",
-    "static/js/2.d975b02f.chunk.js.map": "/vikings/static/js/2.d975b02f.chunk.js.map",
-    "static/js/3.fa0c92d8.chunk.js": "/vikings/static/js/3.fa0c92d8.chunk.js",
-    "static/js/3.fa0c92d8.chunk.js.map": "/vikings/static/js/3.fa0c92d8.chunk.js.map",
-    "index.html": "/vikings/index.html",
-    "static/css/main.8219310c.chunk.css.map": "/vikings/static/css/main.8219310c.chunk.css.map",
-    "static/js/2.d975b02f.chunk.js.LICENSE.txt": "/vikings/static/js/2.d975b02f.chunk.js.LICENSE.txt",
-    "static/media/reset.css": "/vikings/static/media/font.617a0a92.woff"
+    "main.css": "/Vikings-NFT/static/css/main.45c86603.chunk.css",
+    "main.js": "/Vikings-NFT/static/js/main.232db277.chunk.js",
+    "main.js.map": "/Vikings-NFT/static/js/main.232db277.chunk.js.map",
+    "runtime-main.js": "/Vikings-NFT/static/js/runtime-main.d899de27.js",
+    "runtime-main.js.map": "/Vikings-NFT/static/js/runtime-main.d899de27.js.map",
+    "static/js/2.119f5009.chunk.js": "/Vikings-NFT/static/js/2.119f5009.chunk.js",
+    "static/js/2.119f5009.chunk.js.map": "/Vikings-NFT/static/js/2.119f5009.chunk.js.map",
+    "static/js/3.fa0c92d8.chunk.js": "/Vikings-NFT/static/js/3.fa0c92d8.chunk.js",
+    "static/js/3.fa0c92d8.chunk.js.map": "/Vikings-NFT/static/js/3.fa0c92d8.chunk.js.map",
+    "index.html": "/Vikings-NFT/index.html",
+    "static/css/main.45c86603.chunk.css.map": "/Vikings-NFT/static/css/main.45c86603.chunk.css.map",
+    "static/js/2.119f5009.chunk.js.LICENSE.txt": "/Vikings-NFT/static/js/2.119f5009.chunk.js.LICENSE.txt",
+    "static/media/reset.css": "/Vikings-NFT/static/media/font.617a0a92.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.9cf20d79.js",
-    "static/js/2.d975b02f.chunk.js",
-    "static/css/main.8219310c.chunk.css",
+    "static/js/runtime-main.d899de27.js",
+    "static/js/2.119f5009.chunk.js",
+    "static/css/main.45c86603.chunk.css",
     "static/js/main.232db277.chunk.js"
   ]
 }

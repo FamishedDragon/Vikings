@@ -34,14 +34,15 @@ const updateAccountRequest = (payload) => {
 export const connect = () => {
   return async (dispatch) => {
     dispatch(connectRequest());
-    const abiResponse = await fetch("/config/abi.json", {
+    const abiResponse = await fetch(`${process.env.PUBLIC_URL}/config/abi.json`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
     });
     const abi = await abiResponse.json();
-    const configResponse = await fetch("/config/config.json", {
+    console.log(abi);
+    const configResponse = await fetch(`${process.env.PUBLIC_URL}/config/config.json`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",

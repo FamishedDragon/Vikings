@@ -88,13 +88,12 @@ export const StyledLink = styled.a`
 `;
 
 function App() {
-  const pageUrl = "/vikings/vikings-dapp";
-  const nftGifImage = `${pageUrl}/config/images/slow-viking-loop.gif`;
+  const nftGifImage = `${process.env.PUBLIC_URL}/config/images/slow-viking-loop.gif`;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Chests guarenteed with mint!`);
+  const [feedback, setFeedback] = useState(`Get your Vikings!`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
@@ -170,7 +169,7 @@ function App() {
   };
 
   const getConfig = async () => {
-    const configResponse = await fetch(`${pageUrl}/config/config.json`, {
+    const configResponse = await fetch(`${process.env.PUBLIC_URL}/config/config.json`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -202,7 +201,7 @@ function App() {
         ai={"center"}
         style={{ padding: 24 }}
       >
-        <StyledLogo alt={"logo"} src={`${pageUrl}/config/images/logo.png`} />
+        <StyledLogo alt={"logo"} src={`${process.env.PUBLIC_URL}/config/images/logo.png`} />
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
@@ -223,7 +222,7 @@ function App() {
               marginRight:15,
               marginLeft: 15
             }}
-            image={CONFIG.SHOW_BACKGROUND ? `${pageUrl}/config/images/bg.jpg` : null}
+            image={CONFIG.SHOW_BACKGROUND ? `${process.env.PUBLIC_URL}/config/images/bg.jpg` : null}
           >
             <s.TextTitle
               style={{
@@ -378,23 +377,34 @@ function App() {
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
-                          setMintAmount(3);
-                          claimNFTs();
-                          getData();
-                        }}
-                      >
-                        {claimingNft ? "BUSY" : "MINT 3"}
-                      </StyledButton>
-                      <StyledButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setMintAmount();
+                          setMintAmount(5);
                           claimNFTs();
                           getData();
                         }}
                       >
                         {claimingNft ? "BUSY" : "MINT 5"}
+                      </StyledButton>
+                      <StyledButton
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setMintAmount(10);
+                          claimNFTs();
+                          getData();
+                        }}
+                      >
+                        {claimingNft ? "BUSY" : "MINT 10"}
+                      </StyledButton>
+                      <StyledButton
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setMintAmount(15);
+                          claimNFTs();
+                          getData();
+                        }}
+                      >
+                        {claimingNft ? "BUSY" : "MINT 15"}
                       </StyledButton>
                     </s.Container>
                   </>

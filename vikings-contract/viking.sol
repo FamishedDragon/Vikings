@@ -23,7 +23,7 @@ contract Viking is ERC721Enumerable, Ownable {
     constructor(string memory baseURI) ERC721("Warriors Of Ether Viking", "VIK")  {
         setBaseURI(baseURI);
 
-        // dev team gets the first 5 vikings
+        // dev team gets the first 2 vikings
         _safeMint( dev1, 0);
         _safeMint( dev2, 1);
     }

@@ -88,7 +88,8 @@ export const StyledLink = styled.a`
 `;
 
 function App() {
-  const nftGifImage = "/config/images/slow-viking-loop.gif";
+  const pageUrl = "/vikings/vikings-dapp";
+  const nftGifImage = `${pageUrl}/config/images/slow-viking-loop.gif`;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
@@ -169,7 +170,7 @@ function App() {
   };
 
   const getConfig = async () => {
-    const configResponse = await fetch("/config/config.json", {
+    const configResponse = await fetch(`${pageUrl}/config/config.json`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -201,7 +202,7 @@ function App() {
         ai={"center"}
         style={{ padding: 24 }}
       >
-        <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
+        <StyledLogo alt={"logo"} src={`${pageUrl}/config/images/logo.png`} />
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
@@ -222,7 +223,7 @@ function App() {
               marginRight:15,
               marginLeft: 15
             }}
-            image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.jpg" : null}
+            image={CONFIG.SHOW_BACKGROUND ? `${pageUrl}/config/images/bg.jpg` : null}
           >
             <s.TextTitle
               style={{
@@ -377,23 +378,23 @@ function App() {
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
-                          setMintAmount(2);
-                          claimNFTs();
-                          getData();
-                        }}
-                      >
-                        {claimingNft ? "BUSY" : "MINT 2"}
-                      </StyledButton>
-                      <StyledButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
                           setMintAmount(3);
                           claimNFTs();
                           getData();
                         }}
                       >
                         {claimingNft ? "BUSY" : "MINT 3"}
+                      </StyledButton>
+                      <StyledButton
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setMintAmount();
+                          claimNFTs();
+                          getData();
+                        }}
+                      >
+                        {claimingNft ? "BUSY" : "MINT 5"}
                       </StyledButton>
                     </s.Container>
                   </>

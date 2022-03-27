@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Vikings/vikings-dapp/static/css/main.6f5424d4.chunk.css",
-    "main.js": "/Vikings/vikings-dapp/static/js/main.1ab5f58d.chunk.js",
-    "main.js.map": "/Vikings/vikings-dapp/static/js/main.1ab5f58d.chunk.js.map",
-    "runtime-main.js": "/Vikings/vikings-dapp/static/js/runtime-main.55718e47.js",
-    "runtime-main.js.map": "/Vikings/vikings-dapp/static/js/runtime-main.55718e47.js.map",
-    "static/js/2.bf857dc0.chunk.js": "/Vikings/vikings-dapp/static/js/2.bf857dc0.chunk.js",
-    "static/js/2.bf857dc0.chunk.js.map": "/Vikings/vikings-dapp/static/js/2.bf857dc0.chunk.js.map",
-    "static/js/3.fa0c92d8.chunk.js": "/Vikings/vikings-dapp/static/js/3.fa0c92d8.chunk.js",
-    "static/js/3.fa0c92d8.chunk.js.map": "/Vikings/vikings-dapp/static/js/3.fa0c92d8.chunk.js.map",
-    "index.html": "/Vikings/vikings-dapp/index.html",
-    "static/css/main.6f5424d4.chunk.css.map": "/Vikings/vikings-dapp/static/css/main.6f5424d4.chunk.css.map",
-    "static/js/2.bf857dc0.chunk.js.LICENSE.txt": "/Vikings/vikings-dapp/static/js/2.bf857dc0.chunk.js.LICENSE.txt",
-    "static/media/reset.css": "/Vikings/vikings-dapp/static/media/font.617a0a92.woff"
+    "main.css": "/Vikings/static/css/main.00894fa6.chunk.css",
+    "main.js": "/Vikings/static/js/main.0c58c451.chunk.js",
+    "main.js.map": "/Vikings/static/js/main.0c58c451.chunk.js.map",
+    "runtime-main.js": "/Vikings/static/js/runtime-main.1261ee13.js",
+    "runtime-main.js.map": "/Vikings/static/js/runtime-main.1261ee13.js.map",
+    "static/js/2.152bd6b0.chunk.js": "/Vikings/static/js/2.152bd6b0.chunk.js",
+    "static/js/2.152bd6b0.chunk.js.map": "/Vikings/static/js/2.152bd6b0.chunk.js.map",
+    "static/js/3.fa0c92d8.chunk.js": "/Vikings/static/js/3.fa0c92d8.chunk.js",
+    "static/js/3.fa0c92d8.chunk.js.map": "/Vikings/static/js/3.fa0c92d8.chunk.js.map",
+    "index.html": "/Vikings/index.html",
+    "static/css/main.00894fa6.chunk.css.map": "/Vikings/static/css/main.00894fa6.chunk.css.map",
+    "static/js/2.152bd6b0.chunk.js.LICENSE.txt": "/Vikings/static/js/2.152bd6b0.chunk.js.LICENSE.txt",
+    "static/media/reset.css": "/Vikings/static/media/font.617a0a92.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.55718e47.js",
-    "static/js/2.bf857dc0.chunk.js",
-    "static/css/main.6f5424d4.chunk.css",
-    "static/js/main.1ab5f58d.chunk.js"
+    "static/js/runtime-main.1261ee13.js",
+    "static/js/2.152bd6b0.chunk.js",
+    "static/css/main.00894fa6.chunk.css",
+    "static/js/main.0c58c451.chunk.js"
   ]
 }

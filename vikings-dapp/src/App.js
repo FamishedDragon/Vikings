@@ -124,7 +124,7 @@ function App() {
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(mintAmount)
+      .adopt(mintAmount)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,

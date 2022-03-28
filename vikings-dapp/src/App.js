@@ -114,17 +114,17 @@ function App() {
     SHOW_BACKGROUND: false,
   });
 
-  const claimNFTs = () => {
+  const claimNFTs = (num) => {
     let cost = CONFIG.WEI_COST;
     let gasLimit = CONFIG.GAS_LIMIT;
-    let totalCostWei = String(cost * mintAmount);
-    let totalGasLimit = String(gasLimit * mintAmount);
+    let totalCostWei = String(cost * num);
+    let totalGasLimit = String(gasLimit * num);
     console.log("Cost: ", totalCostWei);
     console.log("Gas limit: ", totalGasLimit);
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .adopt(mintAmount)
+      .adopt(num)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -366,8 +366,7 @@ function App() {
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
-                          setMintAmount(1);
-                          claimNFTs();
+                          claimNFTs(1);
                           getData();
                         }}
                       >
@@ -377,34 +376,22 @@ function App() {
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
-                          setMintAmount(5);
-                          claimNFTs();
+                          claimNFTs(3);
+                          getData();
+                        }}
+                      >
+                        {claimingNft ? "BUSY" : "MINT 3"}
+                      </StyledButton>
+                      <StyledButton
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setMintAmount();
+                          claimNFTs(5);
                           getData();
                         }}
                       >
                         {claimingNft ? "BUSY" : "MINT 5"}
-                      </StyledButton>
-                      <StyledButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setMintAmount(10);
-                          claimNFTs();
-                          getData();
-                        }}
-                      >
-                        {claimingNft ? "BUSY" : "MINT 10"}
-                      </StyledButton>
-                      <StyledButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setMintAmount(15);
-                          claimNFTs();
-                          getData();
-                        }}
-                      >
-                        {claimingNft ? "BUSY" : "MINT 15"}
                       </StyledButton>
                     </s.Container>
                   </>

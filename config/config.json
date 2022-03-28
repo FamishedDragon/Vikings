@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0xd4395D07761A7703BaBC02CA9d71C4106070254F",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/token/0xd4395D07761A7703BaBC02CA9d71C4106070254F",
+  "CONTRACT_ADDRESS": "0x2b1d3C26b27bBe6D4D8A7bc37782CedEDb0e0577",
+  "SCAN_LINK": "https://etherscan.io/token/0x2b1d3C26b27bBe6D4D8A7bc37782CedEDb0e0577",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Battle Warriors Viking",
   "SYMBOL": "VIK",
   "MAX_SUPPLY": 1111,
   "WEI_COST": 0,
   "DISPLAY_COST": 0.00,
-  "GAS_LIMIT": 285000,
+  "GAS_LIMIT": 225000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/warriors-of-ether-viking-0888vrhlpu",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/warriors-of-ether-viking",
   "SHOW_BACKGROUND": true
 }

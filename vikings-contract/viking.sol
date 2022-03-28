@@ -9,11 +9,12 @@ contract Viking is ERC721Enumerable, Ownable {
     using Strings for uint256;
 
     string _baseTokenURI;
-    uint256 private _reserved = 150;
+    uint256 private _reserved = 75;
     uint256 private _price = 0 ether;
     bool public _paused = true;
     uint private _maximumViking = 1111;
-    uint256 private _maxMintAmount = 15;
+    uint256 private _maxMintAmount = 5;
+    string private _baseExtension = ".json";
 
     // Developer addresses
     address dev1 = 0x41489AC775dd52bD5Bc616149aB93e371E9D3687; // Ragnar
@@ -23,9 +24,11 @@ contract Viking is ERC721Enumerable, Ownable {
     constructor(string memory baseURI) ERC721("Warriors Of Ether Viking", "VIK")  {
         setBaseURI(baseURI);
 
-        // dev team gets the first 2 vikings
+        // dev team gets the first 4 vikings
         _safeMint( dev1, 0);
         _safeMint( dev2, 1);
+        _safeMint( dev1, 2);
+        _safeMint( dev2, 3);
     }
 
     function adopt(uint256 num) public payable {
@@ -76,6 +79,19 @@ contract Viking is ERC721Enumerable, Ownable {
         }
 
         _reserved -= _amount;
+    }
+
+    // Allow OpenSea to grab metadata
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        require(
+            _exists(tokenId),
+            "ERC721Metadata: URI query for nonexistent token"
+        );
+
+        string memory currentBaseURI = _baseURI();
+        return bytes(currentBaseURI).length > 0
+            ? string(abi.encodePacked(currentBaseURI, tokenId.toString(), _baseExtension))
+            : "";
     }
 
     function pause(bool val) public onlyOwner {
